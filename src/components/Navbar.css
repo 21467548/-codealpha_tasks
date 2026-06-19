@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  width:100%;
+
+  background:rgba(15,15,20,0.95);
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.navbar-container{
+  max-width:1400px;
+  margin:auto;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 50px;
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:800;
+  cursor:pointer;
+
+  background:linear-gradient(
+    135deg,
+    #00e5ff,
+    #6c63ff,
+    #ff4ecd
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  transition:0.4s;
+}
+
+.logo:hover{
+  transform:scale(1.08);
+}
+
+.logo span{
+  -webkit-text-fill-color:initial;
+}
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.nav-link{
+  text-decoration:none;
+  color:white;
+
+  padding:10px 18px;
+  border-radius:50px;
+
+  font-size:15px;
+  font-weight:600;
+
+  transition:all .35s ease;
+}
+
+.nav-link:hover{
+  background:linear-gradient(
+    135deg,
+    #00e5ff,
+    #6c63ff
+  );
+
+  transform:translateY(-3px);
+
+  box-shadow:0 8px 20px rgba(108,99,255,.4);
+}
+
+.admin-btn{
+  text-decoration:none;
+  color:white;
+
+  padding:12px 24px;
+
+  border-radius:50px;
+
+  background:linear-gradient(
+    135deg,
+    #ff512f,
+    #dd2476
+  );
+
+  font-weight:700;
+
+  box-shadow:0 8px 20px rgba(221,36,118,.4);
+
+  transition:all .35s ease;
+}
+
+.admin-btn:hover{
+  transform:translateY(-4px) scale(1.05);
+
+  box-shadow:0 12px 28px rgba(221,36,118,.6);
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+  .navbar-container{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+  }
+
+  .nav-menu{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+}
+
+@media(max-width:768px){
+
+  .logo{
+    font-size:1.7rem;
+  }
+
+  .nav-link,
+  .admin-btn{
+    font-size:14px;
+    padding:10px 15px;
+  }
+}
+
+@media(max-width:576px){
+
+  .navbar-container{
+    padding:15px;
+  }
+
+  .nav-menu{
+    width:100%;
+    justify-content:center;
+  }
+
+  .nav-link,
+  .admin-btn{
+    width:100%;
+    text-align:center;
+  }
+}
